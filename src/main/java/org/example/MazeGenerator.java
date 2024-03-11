@@ -36,13 +36,6 @@ public class MazeGenerator implements IMazeGenerator {
         this.currentX = startX;
         this.currentY = startY;
 
-        // Initially, make all cells have all walls
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                cells[x][y] = new Cell(x, y, true, true, true, true);
-            }
-        }
-
         // Create a path of 4 cells to the right
         for (int x = startX; x < startX + 4; x++) {
             // Check bounds and remove walls between cells
